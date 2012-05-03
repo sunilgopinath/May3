@@ -9,6 +9,7 @@
 #import "View.h"
 
 @implementation View
+@synthesize mySwitch;	//in View.m
 
 - (id)initWithFrame:(CGRect)frame
 {

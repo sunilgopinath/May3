@@ -11,5 +11,6 @@
 @interface View : UIView {
     UISwitch *mySwitch;
 }
+@property (strong, nonatomic) UISwitch *mySwitch;
 
 @end

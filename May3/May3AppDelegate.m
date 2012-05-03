@@ -32,7 +32,7 @@
 		NSLog(@"could not initialize player:  %@", error);
 	} else {
 		player.volume = 1.0;		//the default
-		player.numberOfLoops = -1;	//negative for infinite loop
+		player.numberOfLoops = 0;	//negative for infinite loop
 		[player setDelegate: self];
 		//mono or stereo
 		NSLog(@"player.numberOfChannels == %u", player.numberOfChannels);
@@ -62,6 +62,12 @@
 		//The switch has just been turned off.
 		NSLog(@"Paused at %g of %g seconds.", player.deviceCurrentTime, player.duration);
 		[player pause];
+	}
+}
+
+- (void) audioPlayerDidFinishPlaying: (AVAudioPlayer *) p successfully: (BOOL) flag {
+	if (p == player) {
+		[view.mySwitch setOn: NO animated: NO];	//Go back to the OFF position.
 	}
 }
 
