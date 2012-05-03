@@ -1,0 +1,9 @@
+hidesForSinglePage
+A Boolean value that controls whether the page indicator is hidden when there is only one page.
+@property(nonatomic) BOOL hidesForSinglePage
+Discussion
+Assign a value of YES to hide the page indicator when there is only one page; assign NO (the default) to show the page indicator if there is only one page.
+Availability
+		Available in iOS 2.0 and later.
+Declared In
+UIPageControl.h

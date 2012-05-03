@@ -7,6 +7,7 @@
 //
 
 #import "May3AppDelegate.h"
+#import "BigView.h"
 #import "View.h"
 
 @implementation May3AppDelegate
@@ -60,11 +61,11 @@
 	}
     
 	UIScreen *screen = [UIScreen mainScreen];
-	view = [[View alloc] initWithFrame: screen.applicationFrame];
+	bigView = [[BigView alloc] initWithFrame: screen.applicationFrame];
 	self.window = [[UIWindow alloc] initWithFrame: screen.bounds];
 	//self.window.backgroundColor = [UIColor whiteColor];
     
-	[self.window addSubview: view];
+	[self.window addSubview: bigView];
 	[self.window makeKeyAndVisible];
 	return YES;}
 

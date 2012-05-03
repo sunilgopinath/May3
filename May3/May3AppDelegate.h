@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVAudioPlayer.h>
 @class View;
+@class BigView;
 
 @interface May3AppDelegate : UIResponder <UIApplicationDelegate, AVAudioPlayerDelegate> {
 	AVAudioPlayer *player;
-	View *view;
 	UIWindow *_window;
+    BigView *bigView;
+    View *view;
 }
 
 - (void) valueChanged: (id) sender;

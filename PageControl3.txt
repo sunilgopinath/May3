@@ -1,0 +1,9 @@
+numberOfPages
+The number of pages the receiver shows (as dots).
+@property(nonatomic) NSInteger numberOfPages
+Discussion
+The value of the property is the number of pages for the page control to show as dots. The default value is 0.
+Availability
+		Available in iOS 2.0 and later.
+Declared In
+UIPageControl.h

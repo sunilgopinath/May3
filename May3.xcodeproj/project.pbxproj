@@ -16,6 +16,15 @@
 		0FEA574B15520140000B7D0B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEA574A15520140000B7D0B /* AVFoundation.framework */; };
 		0FEA574E1552095C000B7D0B /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA574D1552095C000B7D0B /* View.m */; };
 		0FEA575415520C33000B7D0B /* musette.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA575315520C33000B7D0B /* musette.mp3 */; };
+		0FEA575715521CD1000B7D0B /* BigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA575615521CD1000B7D0B /* BigView.m */; };
+		0FEA575A15521F40000B7D0B /* next.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA575815521F40000B7D0B /* next.jpg */; };
+		0FEA575B15521F40000B7D0B /* prev.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA575915521F40000B7D0B /* prev.jpg */; };
+		0FEA575E15521F90000B7D0B /* PageControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA575D15521F90000B7D0B /* PageControlView.m */; };
+		0FEA5765155228EC000B7D0B /* PageControl0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA5761155228EB000B7D0B /* PageControl0.txt */; };
+		0FEA5766155228EC000B7D0B /* PageControl1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA5762155228EB000B7D0B /* PageControl1.txt */; };
+		0FEA5767155228EC000B7D0B /* PageControl2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA5763155228EB000B7D0B /* PageControl2.txt */; };
+		0FEA5768155228EC000B7D0B /* PageControl3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA5764155228EB000B7D0B /* PageControl3.txt */; };
+		0FEA576B15522ADD000B7D0B /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA576A15522ADD000B7D0B /* SliderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +42,18 @@
 		0FEA574C1552095C000B7D0B /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
 		0FEA574D1552095C000B7D0B /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 		0FEA575315520C33000B7D0B /* musette.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musette.mp3; sourceTree = SOURCE_ROOT; };
+		0FEA575515521CD1000B7D0B /* BigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigView.h; sourceTree = "<group>"; };
+		0FEA575615521CD1000B7D0B /* BigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigView.m; sourceTree = "<group>"; };
+		0FEA575815521F40000B7D0B /* next.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = next.jpg; path = ../next.jpg; sourceTree = "<group>"; };
+		0FEA575915521F40000B7D0B /* prev.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = prev.jpg; path = ../prev.jpg; sourceTree = "<group>"; };
+		0FEA575C15521F90000B7D0B /* PageControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControlView.h; sourceTree = "<group>"; };
+		0FEA575D15521F90000B7D0B /* PageControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageControlView.m; sourceTree = "<group>"; };
+		0FEA5761155228EB000B7D0B /* PageControl0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PageControl0.txt; sourceTree = SOURCE_ROOT; };
+		0FEA5762155228EB000B7D0B /* PageControl1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PageControl1.txt; sourceTree = SOURCE_ROOT; };
+		0FEA5763155228EB000B7D0B /* PageControl2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PageControl2.txt; sourceTree = SOURCE_ROOT; };
+		0FEA5764155228EB000B7D0B /* PageControl3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PageControl3.txt; sourceTree = SOURCE_ROOT; };
+		0FEA576915522ADD000B7D0B /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		0FEA576A15522ADD000B7D0B /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +102,12 @@
 		0FEA57391551FFD4000B7D0B /* May3 */ = {
 			isa = PBXGroup;
 			children = (
-				0FEA575315520C33000B7D0B /* musette.mp3 */,
+				0FEA576915522ADD000B7D0B /* SliderView.h */,
+				0FEA576A15522ADD000B7D0B /* SliderView.m */,
+				0FEA575C15521F90000B7D0B /* PageControlView.h */,
+				0FEA575D15521F90000B7D0B /* PageControlView.m */,
+				0FEA575515521CD1000B7D0B /* BigView.h */,
+				0FEA575615521CD1000B7D0B /* BigView.m */,
 				0FEA574C1552095C000B7D0B /* View.h */,
 				0FEA574D1552095C000B7D0B /* View.m */,
 				0FEA57421551FFD4000B7D0B /* May3AppDelegate.h */,
@@ -94,6 +120,13 @@
 		0FEA573A1551FFD4000B7D0B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0FEA5761155228EB000B7D0B /* PageControl0.txt */,
+				0FEA5762155228EB000B7D0B /* PageControl1.txt */,
+				0FEA5763155228EB000B7D0B /* PageControl2.txt */,
+				0FEA5764155228EB000B7D0B /* PageControl3.txt */,
+				0FEA575815521F40000B7D0B /* next.jpg */,
+				0FEA575915521F40000B7D0B /* prev.jpg */,
+				0FEA575315520C33000B7D0B /* musette.mp3 */,
 				0FEA573B1551FFD4000B7D0B /* May3-Info.plist */,
 				0FEA573C1551FFD4000B7D0B /* InfoPlist.strings */,
 				0FEA573F1551FFD4000B7D0B /* main.m */,
@@ -155,6 +188,12 @@
 			files = (
 				0FEA573E1551FFD4000B7D0B /* InfoPlist.strings in Resources */,
 				0FEA575415520C33000B7D0B /* musette.mp3 in Resources */,
+				0FEA575A15521F40000B7D0B /* next.jpg in Resources */,
+				0FEA575B15521F40000B7D0B /* prev.jpg in Resources */,
+				0FEA5765155228EC000B7D0B /* PageControl0.txt in Resources */,
+				0FEA5766155228EC000B7D0B /* PageControl1.txt in Resources */,
+				0FEA5767155228EC000B7D0B /* PageControl2.txt in Resources */,
+				0FEA5768155228EC000B7D0B /* PageControl3.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +207,9 @@
 				0FEA57401551FFD4000B7D0B /* main.m in Sources */,
 				0FEA57441551FFD4000B7D0B /* May3AppDelegate.m in Sources */,
 				0FEA574E1552095C000B7D0B /* View.m in Sources */,
+				0FEA575715521CD1000B7D0B /* BigView.m in Sources */,
+				0FEA575E15521F90000B7D0B /* PageControlView.m in Sources */,
+				0FEA576B15522ADD000B7D0B /* SliderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

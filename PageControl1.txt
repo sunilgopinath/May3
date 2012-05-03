@@ -1,0 +1,9 @@
+defersCurrentPageDisplay
+A Boolean value that controls when the current page is displayed.
+@property(nonatomic) BOOL defersCurrentPageDisplay
+Discussion
+Set the value of this property to YES so that, when the user clicks the control to go to a new page, the class defers updating the page indicator until it calls updatePageIndicator. Set the value to NO (the default) to have the page indicator updated immediately.
+Availability
+		Available in iOS 2.0 and later.
+Declared In
+UIPageControl.h

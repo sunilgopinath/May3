@@ -1,0 +1,9 @@
+currentPage
+The current page, shown by the receiver as a white dot.
+@property(nonatomic) NSInteger currentPage
+Discussion
+The property value is an integer specifying the current page shown minus one; thus a value of zero (the default) indicates the first page. A page control shows the current page as a white dot. Values outside the possible range are pinned to either 0 or numberOfPages minus 1.
+Availability
+		Available in iOS 2.0 and later.
+Declared In
+UIPageControl.h
