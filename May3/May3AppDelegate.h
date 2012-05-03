@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
+@class View;
 
-@interface May3AppDelegate : UIResponder <UIApplicationDelegate>
+@interface May3AppDelegate : UIResponder <UIApplicationDelegate, AVAudioPlayerDelegate> {
+	AVAudioPlayer *player;
+	View *view;
+	UIWindow *_window;
+}
+
+- (void) valueChanged: (id) sender;
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -7,6 +7,7 @@
 //
 
 #import "May3AppDelegate.h"
+#import "View.h"
 
 @implementation May3AppDelegate
 
@@ -14,11 +15,54 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+	// Override point for customization after application launch.
+	NSBundle *bundle = [NSBundle mainBundle];
+	NSLog(@"bundle.bundelPath == \"%@\"", bundle.bundlePath);
+    
+	NSString *filename = [bundle pathForResource: @"musette" ofType: @"mp3"];
+	NSLog(@"filename == \"%@\"", filename);
+    
+	NSURL *url = [NSURL fileURLWithPath: filename isDirectory: NO];
+	NSLog(@"url == \"%@\"", url);
+    
+	NSError *error = nil;
+	player = [[AVAudioPlayer alloc] initWithContentsOfURL: url error: &error];
+    
+	if (player == nil) {
+		NSLog(@"could not initialize player:  %@", error);
+	} else {
+		player.volume = 1.0;		//the default
+		player.numberOfLoops = -1;	//negative for infinite loop
+		[player setDelegate: self];
+		//mono or stereo
+		NSLog(@"player.numberOfChannels == %u", player.numberOfChannels);
+        
+		if (![player prepareToPlay]) {
+			NSLog(@"prepareToPlay failed");
+		}
+	}
+    
+	UIScreen *screen = [UIScreen mainScreen];
+	view = [[View alloc] initWithFrame: screen.applicationFrame];
+	self.window = [[UIWindow alloc] initWithFrame: screen.bounds];
+	//self.window.backgroundColor = [UIColor whiteColor];
+    
+	[self.window addSubview: view];
+	[self.window makeKeyAndVisible];
+	return YES;}
+
+- (void) valueChanged: (id) sender {
+	UISwitch *s = sender;
+	if (s.isOn) {
+		//The switch has just been turned on.
+		if (![player play]) {
+			NSLog(@"[player play] failed.");
+		}
+	} else {
+		//The switch has just been turned off.
+		NSLog(@"Paused at %g of %g seconds.", player.deviceCurrentTime, player.duration);
+		[player pause];
+	}
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

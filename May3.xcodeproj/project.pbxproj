@@ -13,6 +13,9 @@
 		0FEA573E1551FFD4000B7D0B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA573C1551FFD4000B7D0B /* InfoPlist.strings */; };
 		0FEA57401551FFD4000B7D0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA573F1551FFD4000B7D0B /* main.m */; };
 		0FEA57441551FFD4000B7D0B /* May3AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA57431551FFD4000B7D0B /* May3AppDelegate.m */; };
+		0FEA574B15520140000B7D0B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEA574A15520140000B7D0B /* AVFoundation.framework */; };
+		0FEA574E1552095C000B7D0B /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA574D1552095C000B7D0B /* View.m */; };
+		0FEA575415520C33000B7D0B /* musette.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0FEA575315520C33000B7D0B /* musette.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		0FEA57411551FFD4000B7D0B /* May3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "May3-Prefix.pch"; sourceTree = "<group>"; };
 		0FEA57421551FFD4000B7D0B /* May3AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = May3AppDelegate.h; sourceTree = "<group>"; };
 		0FEA57431551FFD4000B7D0B /* May3AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = May3AppDelegate.m; sourceTree = "<group>"; };
+		0FEA574A15520140000B7D0B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0FEA574C1552095C000B7D0B /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		0FEA574D1552095C000B7D0B /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
+		0FEA575315520C33000B7D0B /* musette.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musette.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FEA574B15520140000B7D0B /* AVFoundation.framework in Frameworks */,
 				0FEA57341551FFD4000B7D0B /* UIKit.framework in Frameworks */,
 				0FEA57361551FFD4000B7D0B /* Foundation.framework in Frameworks */,
 				0FEA57381551FFD4000B7D0B /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +70,7 @@
 		0FEA57321551FFD4000B7D0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0FEA574A15520140000B7D0B /* AVFoundation.framework */,
 				0FEA57331551FFD4000B7D0B /* UIKit.framework */,
 				0FEA57351551FFD4000B7D0B /* Foundation.framework */,
 				0FEA57371551FFD4000B7D0B /* CoreGraphics.framework */,
@@ -72,6 +81,9 @@
 		0FEA57391551FFD4000B7D0B /* May3 */ = {
 			isa = PBXGroup;
 			children = (
+				0FEA575315520C33000B7D0B /* musette.mp3 */,
+				0FEA574C1552095C000B7D0B /* View.h */,
+				0FEA574D1552095C000B7D0B /* View.m */,
 				0FEA57421551FFD4000B7D0B /* May3AppDelegate.h */,
 				0FEA57431551FFD4000B7D0B /* May3AppDelegate.m */,
 				0FEA573A1551FFD4000B7D0B /* Supporting Files */,
@@ -142,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FEA573E1551FFD4000B7D0B /* InfoPlist.strings in Resources */,
+				0FEA575415520C33000B7D0B /* musette.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +167,7 @@
 			files = (
 				0FEA57401551FFD4000B7D0B /* main.m in Sources */,
 				0FEA57441551FFD4000B7D0B /* May3AppDelegate.m in Sources */,
+				0FEA574E1552095C000B7D0B /* View.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
