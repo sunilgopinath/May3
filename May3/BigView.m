@@ -24,6 +24,7 @@
         views = [NSArray arrayWithObjects:
                  [[View alloc] initWithFrame:viewRect],
                  [[PageControlView alloc] initWithFrame:viewRect],
+                 [[SliderView alloc] initWithFrame:viewRect],
                  nil
                  ];
         index = 0;

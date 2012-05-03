@@ -7,6 +7,7 @@
 //
 
 #import "SliderView.h"
+#define CELSIUS(fahrenheit) (((fahrenheit) - 32.0) * 100 / (212 - 32))
 
 @implementation SliderView
 
@@ -21,6 +22,7 @@
     
 	label.text = [NSString stringWithFormat: @"%5.1f° F == %5.1f° C",
                   slider.value, CELSIUS(slider.value)];
+    
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -62,7 +64,7 @@
                    action: @selector(valueChanged:)
          forControlEvents: UIControlEventValueChanged
          ];
-        
+        slider.transform = CGAffineTransformMakeRotation(-90 * M_PI / 180);
 		[self addSubview: slider];
         
 		//Put the label above the slider
