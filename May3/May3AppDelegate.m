@@ -40,6 +40,23 @@
 		if (![player prepareToPlay]) {
 			NSLog(@"prepareToPlay failed");
 		}
+        
+        NSEnumerator *e = [player.settings keyEnumerator];
+		NSString *key;
+        
+		while ((key = [e nextObject]) != nil) {
+			if ([key isEqualToString: @"AVFormatIDKey"]) {
+				const int i = ((NSNumber *)[player.settings objectForKey: key]).intValue;
+				NSLog(@"%@ %c%c%c%c", key,
+                      i >> 3 * CHAR_BIT & 0xFF,
+                      i >> 2 * CHAR_BIT & 0xFF,
+                      i >> 1 * CHAR_BIT & 0xFF,
+                      i >> 0 * CHAR_BIT & 0xFF
+                      );
+			} else {
+				NSLog(@"%@ %@", key, [player.settings objectForKey: key]);
+			}
+		}
 	}
     
 	UIScreen *screen = [UIScreen mainScreen];
