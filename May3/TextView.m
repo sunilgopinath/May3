@@ -31,7 +31,7 @@
                               );
         
         textField = [[UITextField alloc] initWithFrame: f];
-		textField.borderStyle = UITextBorderStyleNone;	//default
+		textField.borderStyle = UITextBorderStyleRoundedRect;	//default
 		textField.backgroundColor = [UIColor yellowColor];
 		textField.textColor = [UIColor blackColor];
         
