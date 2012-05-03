@@ -17,17 +17,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Override point for customization after application launch.
+    
+    // Bach player
 	NSBundle *bundle = [NSBundle mainBundle];
 	NSLog(@"bundle.bundelPath == \"%@\"", bundle.bundlePath);
     
 	NSString *filename = [bundle pathForResource: @"musette" ofType: @"mp3"];
 	NSLog(@"filename == \"%@\"", filename);
     
-	NSURL *url = [NSURL fileURLWithPath: filename isDirectory: NO];
-	NSLog(@"url == \"%@\"", url);
+	NSURL *urlBach = [NSURL fileURLWithPath: filename isDirectory: NO];
+	NSLog(@"url == \"%@\"", urlBach);
     
 	NSError *error = nil;
-	player = [[AVAudioPlayer alloc] initWithContentsOfURL: url error: &error];
+	player = [[AVAudioPlayer alloc] initWithContentsOfURL: urlBach error: &error];
     
 	if (player == nil) {
 		NSLog(@"could not initialize player:  %@", error);
@@ -67,7 +69,8 @@
     
 	[self.window addSubview: bigView];
 	[self.window makeKeyAndVisible];
-	return YES;}
+	return YES;
+}
 
 - (void) valueChanged: (id) sender {
 	UISwitch *s = sender;
@@ -80,16 +83,6 @@
 		//The switch has just been turned off.
 		NSLog(@"Paused at %g of %g seconds.", player.deviceCurrentTime, player.duration);
 		[player pause];
-	}
-}
-
-- (void) changeVolume: (id) sender {
-    
-}
-
-- (void) audioPlayerDidFinishPlaying: (AVAudioPlayer *) p successfully: (BOOL) flag {
-	if (p == player) {
-		[view.mySwitch setOn: NO animated: NO];	//Go back to the OFF position.
 	}
 }
 

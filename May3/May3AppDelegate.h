@@ -7,15 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVAudioPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 @class View;
 @class BigView;
+@class SegmentView;
 
 @interface May3AppDelegate : UIResponder <UIApplicationDelegate, AVAudioPlayerDelegate> {
-	@public AVAudioPlayer *player;
+	
 	UIWindow *_window;
     BigView *bigView;
     View *view;
+
+    @public AVAudioPlayer *player;
+                            
+                                              
 }
 
 - (void) valueChanged: (id) sender;

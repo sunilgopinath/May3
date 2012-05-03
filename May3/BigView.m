@@ -10,6 +10,7 @@
 #import "View.h"
 #import "PageControlView.h"
 #import "SliderView.h"
+#import "DatePickerView.h"
 
 @implementation BigView
 
@@ -25,6 +26,7 @@
                  [[View alloc] initWithFrame:viewRect],
                  [[PageControlView alloc] initWithFrame:viewRect],
                  [[SliderView alloc] initWithFrame:viewRect],
+                 [[DatePickerView alloc] initWithFrame:viewRect],
                  nil
                  ];
         index = 0;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FE97F451552A7D9009B292A /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE97F441552A7D9009B292A /* DatePickerView.m */; };
 		0FEA57341551FFD4000B7D0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEA57331551FFD4000B7D0B /* UIKit.framework */; };
 		0FEA57361551FFD4000B7D0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEA57351551FFD4000B7D0B /* Foundation.framework */; };
 		0FEA57381551FFD4000B7D0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FEA57371551FFD4000B7D0B /* CoreGraphics.framework */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FE97F431552A7D9009B292A /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		0FE97F441552A7D9009B292A /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
 		0FEA572F1551FFD4000B7D0B /* May3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = May3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FEA57331551FFD4000B7D0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FEA57351551FFD4000B7D0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +105,8 @@
 		0FEA57391551FFD4000B7D0B /* May3 */ = {
 			isa = PBXGroup;
 			children = (
+				0FEA57421551FFD4000B7D0B /* May3AppDelegate.h */,
+				0FEA57431551FFD4000B7D0B /* May3AppDelegate.m */,
 				0FEA576915522ADD000B7D0B /* SliderView.h */,
 				0FEA576A15522ADD000B7D0B /* SliderView.m */,
 				0FEA575C15521F90000B7D0B /* PageControlView.h */,
@@ -110,8 +115,8 @@
 				0FEA575615521CD1000B7D0B /* BigView.m */,
 				0FEA574C1552095C000B7D0B /* View.h */,
 				0FEA574D1552095C000B7D0B /* View.m */,
-				0FEA57421551FFD4000B7D0B /* May3AppDelegate.h */,
-				0FEA57431551FFD4000B7D0B /* May3AppDelegate.m */,
+				0FE97F431552A7D9009B292A /* DatePickerView.h */,
+				0FE97F441552A7D9009B292A /* DatePickerView.m */,
 				0FEA573A1551FFD4000B7D0B /* Supporting Files */,
 			);
 			path = May3;
@@ -210,6 +215,7 @@
 				0FEA575715521CD1000B7D0B /* BigView.m in Sources */,
 				0FEA575E15521F90000B7D0B /* PageControlView.m in Sources */,
 				0FEA576B15522ADD000B7D0B /* SliderView.m in Sources */,
+				0FE97F451552A7D9009B292A /* DatePickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +319,7 @@
 				0FEA57491551FFD4000B7D0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
