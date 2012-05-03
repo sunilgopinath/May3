@@ -35,15 +35,15 @@
 		textField.backgroundColor = [UIColor yellowColor];
 		textField.textColor = [UIColor blackColor];
         
-		textField.clearButtonMode = UITextFieldViewModeAlways;
-		textField.keyboardType = UIKeyboardTypeDefault;
-		textField.returnKeyType = UIReturnKeyDone;
+		textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+		textField.keyboardType =  UIKeyboardTypeEmailAddress;
+		textField.returnKeyType = UIReturnKeyGoogle;
         
 		textField.font = font;
 		textField.placeholder = @"<type a word>";
 		textField.textAlignment = UITextAlignmentLeft;	//default
 		textField.autocapitalizationType = UITextAutocapitalizationTypeNone; //default
-		textField.autocorrectionType = UITextAutocorrectionTypeNo;
+		textField.autocorrectionType = UITextAutocorrectionTypeYes;
 		textField.secureTextEntry = NO;	//for secret passwords
         
         textField.delegate = self;
@@ -72,18 +72,27 @@
 //Decide if the app should accept this input and hide the keyboard.
 
 - (BOOL) textFieldShouldReturn: (UITextField *) tf {
-	if ([tf.text isEqualToString: @""]) {
+    
+    
+	if ([tf.text isEqualToString: @""] ) {
 		textField.placeholder = @"<type a non-empty word>";
-	} else {
+	} else if([tf.text rangeOfString:@"watermelon"].location != NSNotFound) {
+        NSLog(@"string is watermelon");
+        textField.text = @"no watermelons";
+        textField.text = @"";
+    }
+    else {
 		[tf resignFirstResponder];	//Hide keyboard.
 	}
-	return YES;	//The text field should do its default behavior.
+	return NO;	//The text field should do its default behavior.
 }
 
 - (void) textFieldDidEndEditing: (UITextField *) tf {
 	if ([textField.text isEqualToString: @""]) {
 		label.text = @"";
-	} else {
+	} else if([textField.text isEqualToString: @"watermelon"]) {
+        label.text = @"no watermelons please";
+    } else {
 		NSString *lowercase = [textField.text lowercaseString];
         
 		label.text = [NSString stringWithFormat: @"%@%@ay",
