@@ -12,7 +12,7 @@
 @class BigView;
 
 @interface May3AppDelegate : UIResponder <UIApplicationDelegate, AVAudioPlayerDelegate> {
-	AVAudioPlayer *player;
+	@public AVAudioPlayer *player;
 	UIWindow *_window;
     BigView *bigView;
     View *view;

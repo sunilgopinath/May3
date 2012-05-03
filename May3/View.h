@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "May3AppDelegate.h"
 
 @interface View : UIView {
     UISwitch *mySwitch;
+    UISlider *slider;
+    UILabel *label;
+    May3AppDelegate *appDelegate;
 }
 @property (strong, nonatomic) UISwitch *mySwitch;
 

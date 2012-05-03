@@ -83,6 +83,10 @@
 	}
 }
 
+- (void) changeVolume: (id) sender {
+    
+}
+
 - (void) audioPlayerDidFinishPlaying: (AVAudioPlayer *) p successfully: (BOOL) flag {
 	if (p == player) {
 		[view.mySwitch setOn: NO animated: NO];	//Go back to the OFF position.
