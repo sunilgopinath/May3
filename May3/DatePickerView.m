@@ -31,11 +31,17 @@
     if (self) {
         // Initialization code
         dateFormatter = [[NSDateFormatter alloc] init];
+        
 		[dateFormatter setDateStyle: NSDateFormatterFullStyle];
 		[dateFormatter setTimeStyle: NSDateFormatterFullStyle];
         
 		//Let the date picker assume its natural size.
 		datePicker = [[UIDatePicker alloc] initWithFrame: CGRectZero];
+        datePicker.calendar =
+		[[NSCalendar alloc] initWithCalendarIdentifier: NSHebrewCalendar];
+        
+        NSLog(@"picker.calendar.calendarIdentifier == %@",
+              datePicker.calendar.calendarIdentifier);
 		//datePicker.datePickerMode = UIDatePickerModeDate; //vs. UIDatePickerModeTime
         
         //so we don't have to look up the day of the week of December 31, 2011

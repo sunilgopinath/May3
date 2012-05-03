@@ -103,6 +103,11 @@
         NSLog(@"filepath not found");
     }
     
+    label.text = [NSString stringWithFormat:
+                  @"page %2d of %d",
+                  c.currentPage + 1, c.numberOfPages
+                  ];
+    
     
 }
 
