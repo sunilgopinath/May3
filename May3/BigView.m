@@ -11,6 +11,7 @@
 #import "PageControlView.h"
 #import "SliderView.h"
 #import "DatePickerView.h"
+#import "TextView.h"
 
 @implementation BigView
 
@@ -27,6 +28,7 @@
                  [[PageControlView alloc] initWithFrame:viewRect],
                  [[SliderView alloc] initWithFrame:viewRect],
                  [[DatePickerView alloc] initWithFrame:viewRect],
+                 [[TextView alloc] initWithFrame:viewRect],
                  nil
                  ];
         index = 0;
@@ -134,7 +136,7 @@
             NSLog(@"index is %i and newIndex is %i", index, newIndex);
             [UIView transitionFromView: [views objectAtIndex: index]
                                 toView: [views objectAtIndex: newIndex]
-                              duration: 2.25
+                              duration: 0
                                options: UIViewAnimationOptionTransitionFlipFromLeft
                             completion: NULL
              ];
@@ -154,7 +156,7 @@
             NSLog(@"index is %i and newIndex is %i", index, newIndex);
             [UIView transitionFromView: [views objectAtIndex: index]
                                 toView: [views objectAtIndex: newIndex]
-                              duration: 2.25
+                              duration: 0
                                options: UIViewAnimationOptionTransitionFlipFromRight
                             completion: NULL
              ];
@@ -199,7 +201,7 @@
     NSLog(@"index is %i and newIndex is %i", index, newIndex);
     [UIView transitionFromView: [views objectAtIndex: index]
                         toView: [views objectAtIndex: newIndex]
-                      duration: 2.25
+                      duration: 0
                        options: UIViewAnimationOptionTransitionFlipFromRight
                     completion: NULL
      ];
@@ -223,7 +225,7 @@
     NSLog(@"index is %i and newIndex is %i", index, newIndex);
     [UIView transitionFromView: [views objectAtIndex: index]
                         toView: [views objectAtIndex: newIndex]
-                      duration: 2.25
+                      duration: 0
                        options: UIViewAnimationOptionTransitionFlipFromLeft
                     completion: NULL
      ];
